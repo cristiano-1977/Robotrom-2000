@@ -57,3 +57,20 @@ function atualizaEstatisticas(peca) {
         elemento.textContent = parseInt(elemento.textContent) + pecas[peca][elemento.dataset.estatistica]
     })
 }
+
+function trocaImagem(alterar){
+    const ImagemRobo = document.querySelector('[data-robo]');    
+
+    const cores = [
+        'azul',
+        'branco',
+        'preto',
+        'rosa',
+        'vermelho',
+        'amarelo'
+    ]
+
+    if(cores.includes(alterar)){
+        ImagemRobo.src = `./img/robotron-${alterar}.png`;
+    }
+}
